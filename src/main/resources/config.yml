@@ -1,0 +1,59 @@
+ggamble:
+  permission: "gutils.admin"
+  messages:
+    no-perms: "&cSem permissão"
+    invalid-message: "&cUso correto: /ggamble reload"
+    reload-message: "&aConfig recarregada com sucesso!"
+    player-only: "Players apenas."
+
+gamble:
+  max-bet: 50000
+  min-bet: 1000
+  #percentage: Example - 20 == 20%
+  win-chance: 20
+  inventory:
+    title: "Aposta - %value%"
+    items:
+      confirm:
+        name: "&aConfirmar"
+      cancel:
+        name: "&cCancelar"
+      coin:
+        name: "&6&lMoeda &7(Botão Direito)"
+        lore:
+          - ""
+          - "&7Atira a moeda ao ar!"
+          - "&7Podes ganhar &e%value2%"
+          - ""
+
+  messages:
+    max-bet: "&cSó podes apostar até %qt% pratas."
+    min-bet: "&cSó podes apostar mais de %qt% pratas."
+    insuf-args: "&cUso correto: /gamble <quantidade>"
+    confirm: "&aRecebeste uma moeda de %value%. Boa Sorte!"
+    cancel: "&cA operação foi cancelada."
+    no-money: "&cNão tens dinheiro suficiente."
+    win: "&aGanhaste %value%!"
+    lose: "&cPerdeste %value%..."
+
+caixa1:
+  name: "&d&lCaixa Misteriosa &7(Botão Direito)"
+  lore:
+    - ""
+    - "&7Coloca no chão"
+    - "&7para ganhares uma recompensa!"
+    - ""
+    - "&7&iShift + Botão direito para visualizar"
+  rewards:
+    item1:
+      material: "STONE"
+      name: "Cu Caralho"
+      lore:
+        - ""
+        - "teste"
+        - ""
+      command: "/money give %player% 69"
+      quantity: 1
+
+  messages:
+    reward: "&aParabéns! Ganhaste &l%reward%"

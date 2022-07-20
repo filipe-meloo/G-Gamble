@@ -1,0 +1,18 @@
+name: G-Gamble
+version: '${project.version}'
+main: me.filipe.ggamble.ggamble.GGamble
+api-version: 1.19
+authors: [ GamerExxtreme ]
+
+commands:
+  ggamble:
+    usage: /<command>
+    description: Reload command
+  gamble:
+    usage: /<command>
+    description: Comando usado para apostas.
+  givepiroca:
+    usage: /<command>
+  createholo:
+    usage: /<command>
+
