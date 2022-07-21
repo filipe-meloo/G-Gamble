@@ -1,4 +1,4 @@
-#G-Gamble
+# G-Gamble
 
 Um plugin de apostas simples, com caixas misteriosas.
 
