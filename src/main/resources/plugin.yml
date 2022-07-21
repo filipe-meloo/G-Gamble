@@ -11,8 +11,8 @@ commands:
   gamble:
     usage: /<command>
     description: Comando usado para apostas.
-  givepiroca:
+  givecaixa:
     usage: /<command>
-  createholo:
+  listcaixas:
     usage: /<command>
 

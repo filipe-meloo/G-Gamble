@@ -36,24 +36,33 @@ gamble:
     win: "&aGanhaste %value%!"
     lose: "&cPerdeste %value%..."
 
-caixa1:
-  name: "&d&lCaixa Misteriosa &7(Botão Direito)"
-  lore:
-    - ""
-    - "&7Coloca no chão"
-    - "&7para ganhares uma recompensa!"
-    - ""
-    - "&7&iShift + Botão direito para visualizar"
-  rewards:
-    item1:
-      material: "STONE"
-      name: "Cu Caralho"
-      lore:
-        - ""
-        - "teste"
-        - ""
-      command: "/money give %player% 69"
-      quantity: 1
+caixas:
+  caixa1:
+    material: CHEST
+    name: "&d&lCaixa Misteriosa &7(Botão Direito)"
+    lore:
+      - ""
+      - "&7Coloca no chão"
+      - "&7para ganhares uma recompensa!"
+      - ""
+      - "&7&iShift + Botão direito para visualizar"
+    rewards:
+      item1:
+        material: "STONE"
+        name: "Cu Caralho"
+        lore:
+          - ""
+          - "teste"
+          - ""
+        command: "/money give %player% 69"
+        quantity: 1
 
   messages:
     reward: "&aParabéns! Ganhaste &l%reward%"
+    invalid-give: "&cUsa: /givecaixa <caixa> <jogador> <qt>"
+    no-exist: "&cEssa caixa não existe!"
+    invalid-player: "&cJogador inválido."
+    invalid-qt: "&cQuantidade inválida."
+    no-space: "&cO jogador não tem espaço no inventário."
+    success-give: "&aDeste &e%qt% &a- &e%caixa% &aao jogador &e%player%&a."
+    received: "&aRecebeste &e%qt% &a- &e%caixa%&a."

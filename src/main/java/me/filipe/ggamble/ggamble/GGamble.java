@@ -1,7 +1,8 @@
 package me.filipe.ggamble.ggamble;
 
-import me.filipe.ggamble.ggamble.commands.CreateTempHolo;
 import me.filipe.ggamble.ggamble.commands.GambleCommand;
+import me.filipe.ggamble.ggamble.commands.GiveCaixa;
+import me.filipe.ggamble.ggamble.commands.ListCaixas;
 import me.filipe.ggamble.ggamble.events.GiraRC;
 import me.filipe.ggamble.ggamble.events.InventoryClick;
 import me.filipe.ggamble.ggamble.utils.Utils;
@@ -27,10 +28,14 @@ public final class GGamble extends JavaPlugin {
             getServer().getPluginManager().disablePlugin(this);
         }
 
+        InitMethods.loadCaixas(this);
+
         new GambleCommand(this);
         new InventoryClick(this);
         new GiraRC(this);
-        new CreateTempHolo(this);
+
+        new GiveCaixa(this);
+        new ListCaixas(this);
     }
 
     @Override
