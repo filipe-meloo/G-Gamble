@@ -45,7 +45,7 @@ caixas:
       - "&7Coloca no chão"
       - "&7para ganhares uma recompensa!"
       - ""
-      - "&7&iShift + Botão direito para visualizar"
+      - "&7&oShift + Botão direito para visualizar"
     rewards:
       item1:
         material: "STONE"

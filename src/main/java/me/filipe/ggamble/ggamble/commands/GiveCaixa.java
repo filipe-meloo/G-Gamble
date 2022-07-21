@@ -53,7 +53,7 @@ public class GiveCaixa implements CommandExecutor {
             //Tudo pronto para a execução
             String path = "caixas." + args[0] + ".";
             ItemStack item = Utils.createItem(Material.getMaterial(plugin.getConfig().getString(path + "material")),
-                    1,
+                    Integer.parseInt(args[2]),
                     plugin.getConfig().getString(path + "name"),
                     plugin.getConfig().getStringList(path + "lore"));
 

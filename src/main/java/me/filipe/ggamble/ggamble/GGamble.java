@@ -60,6 +60,7 @@ public final class GGamble extends JavaPlugin {
             if (args.length > 0) {
                 if (args[0].equalsIgnoreCase("reload") || args[0].equalsIgnoreCase("rl")) {
                     sender.sendMessage(Utils.chat(this.getConfig().getString("ggamble.messages.reload-message")));
+                    InitMethods.loadCaixas(this);
                     this.reloadConfig();
                 }
             }
