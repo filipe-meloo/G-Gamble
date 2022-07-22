@@ -5,6 +5,7 @@ import me.filipe.ggamble.ggamble.commands.GiveCaixa;
 import me.filipe.ggamble.ggamble.commands.ListCaixas;
 import me.filipe.ggamble.ggamble.events.GiraRC;
 import me.filipe.ggamble.ggamble.events.InventoryClick;
+import me.filipe.ggamble.ggamble.events.OpenCaixa;
 import me.filipe.ggamble.ggamble.utils.Utils;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
@@ -36,6 +37,7 @@ public final class GGamble extends JavaPlugin {
 
         new GiveCaixa(this);
         new ListCaixas(this);
+        new OpenCaixa(this);
     }
 
     @Override

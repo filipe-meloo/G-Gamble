@@ -38,7 +38,7 @@ gamble:
 
 caixas:
   caixa1:
-    material: CHEST
+    material: "CHEST"
     name: "&d&lCaixa Misteriosa &7(Botão Direito)"
     lore:
       - ""
@@ -47,15 +47,30 @@ caixas:
       - ""
       - "&7&oShift + Botão direito para visualizar"
     rewards:
-      item1:
+      1:
+        item: true
         material: "STONE"
-        name: "Cu Caralho"
+        name: "&d&lCu Caralho"
         lore:
           - ""
           - "teste"
           - ""
         command: "/money give %player% 69"
         quantity: 1
+        chance: 25
+      2:
+        item: true
+        material: "OAK_LOG"
+        name: "&6Madera"
+        lore:
+        quantity: 1
+        command: "/tell %player% ur gay"
+        chance: 70
+      3:
+        item: false
+        name: "Nada"
+        command: "/broadcast Ola"
+        chance: 5
 
   messages:
     reward: "&aParabéns! Ganhaste &l%reward%"
@@ -66,3 +81,7 @@ caixas:
     no-space: "&cO jogador não tem espaço no inventário."
     success-give: "&aDeste &e%qt% &a- &e%caixa% &aao jogador &e%player%&a."
     received: "&aRecebeste &e%qt% &a- &e%caixa%&a."
+    no-space-open: "&cNão tens espaço suficiente no inventário."
+
+  hologram:
+    open: "&7Recompensa: %reward%"

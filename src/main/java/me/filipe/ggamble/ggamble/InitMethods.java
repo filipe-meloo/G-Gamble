@@ -13,7 +13,7 @@ public class InitMethods {
 
         caixas.clear();
         for(String s : plugin.getConfig().getConfigurationSection("caixas").getKeys(false)){
-            if (!s.equals("messages")) {
+            if (!s.equals("messages") && !s.equals("hologram")) {
                 caixas.add(s);
             }
         }
