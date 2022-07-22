@@ -55,7 +55,7 @@ caixas:
           - ""
           - "teste"
           - ""
-        command: "/money give %player% 69"
+        command: "money give %player% 69"
         quantity: 1
         chance: 25
       2:
@@ -64,12 +64,12 @@ caixas:
         name: "&6Madera"
         lore:
         quantity: 1
-        command: "/tell %player% ur gay"
+        command: "minecraft:tell %player% ur gay"
         chance: 70
       3:
         item: false
         name: "Nada"
-        command: "/broadcast Ola"
+        command: "broadcast Ola"
         chance: 5
 
   messages:

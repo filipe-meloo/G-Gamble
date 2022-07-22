@@ -1,7 +1,11 @@
 package me.filipe.ggamble.ggamble.utils;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.World;
+import org.bukkit.entity.ArmorStand;
+import org.bukkit.entity.EntityType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -35,6 +39,18 @@ public class Utils {
         item.setItemMeta(meta);
 
         return item;
+    }
+
+    public static ArmorStand createHologram(String text, Location location, World world) {
+        ArmorStand hologram = (ArmorStand) world.spawnEntity(location, EntityType.ARMOR_STAND);
+
+        hologram.setVisible(false);
+        hologram.setCanPickupItems(false);
+        hologram.setGravity(false);
+        hologram.setCustomNameVisible(true);
+        hologram.setCustomName(Utils.chat(text));
+
+        return hologram;
     }
 }
 
