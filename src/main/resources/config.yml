@@ -85,3 +85,14 @@ caixas:
 
   hologram:
     open: "&7Recompensa: %reward%"
+
+  gui-rewards:
+    title: "Recompensas"
+    size: 4
+    close:
+      material: "BARRIER"
+      name: "&cFechar"
+      lore:
+        - ""
+        - "&7Fechar."
+        - ""
