@@ -44,6 +44,8 @@ public class ShiftRLCaixa implements Listener {
             return;
         }
 
+        if (!player.isSneaking()) return;
+
         event.setCancelled(true);
         String config = "caixas." + nbti.getString("Caixa") + ".rewards";
         String configgui = "caixas.gui-rewards.";
@@ -51,7 +53,7 @@ public class ShiftRLCaixa implements Listener {
         List<ItemStack> recompensas = InitMethods.getRecompensaItem(nbti.getString("Caixa"));
         List<String> comandos = InitMethods.getRecompensaComando(nbti.getString("Caixa"));
 
-        Inventory inv = Bukkit.createInventory(player, plugin.getConfig().getInt(configgui + "size"), plugin.getConfig().getString(configgui + "title"));
+        Inventory inv = Bukkit.createInventory(player, plugin.getConfig().getInt(configgui + "size") * 9, plugin.getConfig().getString(configgui + "title"));
         ItemStack fechar = Utils.createItem(
                 Material.getMaterial(plugin.getConfig().getString(configgui + "close.material")),
                 1,
@@ -59,27 +61,24 @@ public class ShiftRLCaixa implements Listener {
                 plugin.getConfig().getStringList(configgui + "close.lore")
         );
 
-        inv.setItem((plugin.getConfig().getInt(configgui + "size") * 9 - 4), fechar);
+        inv.setItem((plugin.getConfig().getInt(configgui + "size") * 9 - 5), fechar);
 
         int j = 10;
         for (ItemStack i : recompensas) {
-            inv.setItem(j, i);
-            j++;
             if (j == 16 || j == 25 || j == 34) {
                 j += 3;
             }
+            inv.setItem(j, i);
+            j++;
         }
 
-        if (j == 16 || j == 25 || j == 34) {
-            j += 3;
-        }
         for (String s : comandos) {
+            if (j == 16 || j == 25 || j == 34) {
+                j += 3;
+            }
             ItemStack i = Utils.createItem(Material.NAME_TAG, 1, "/" + s, null);
             inv.setItem(j, i);
             j++;
-            if (j == 16 || j == 25 || j == 34) {
-                j += 3;
-            }
         }
 
         player.openInventory(inv);
@@ -87,6 +86,17 @@ public class ShiftRLCaixa implements Listener {
 
     @EventHandler
     public void onPlayerInventoryClick(InventoryClickEvent event) {
+
+        if (event.getView().getTitle().equals(Utils.chat(plugin.getConfig().getString("caixas.gui-rewards.title")))) {
+            event.setCancelled(true);
+
+            ItemStack itemClick = event.getCurrentItem();
+            if (itemClick == null) return;
+            if (itemClick.getType().equals(Material.BARRIER)) {
+                event.getWhoClicked().closeInventory();
+            }
+
+        }
 
     }
 
